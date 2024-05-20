@@ -30,7 +30,11 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
 
     @Override
     public void onBindViewHolder(@NonNull recyclerviewadapter.MyViewHolder holder, int position) {
-        holder.textview.setText(owls.get(position).getName());
+        holder.nameView.setText(owls.get(position).getName());
+        holder.categoryView.setText(owls.get(position).getSize());
+        holder.categoryView.setText(owls.get(position).getCost());
+        holder.locationView.setText(owls.get(position).getLocation());
+        holder.categoryView.setText(owls.get(position).getCategory());
     }
 
     @Override
@@ -39,11 +43,22 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView textview;
+        TextView nameView;
+        TextView sizeView;
+        TextView costView;
+        TextView locationView;
+        TextView categoryView;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            textview = itemView.findViewById(R.id.title);
+            nameView = itemView.findViewById(R.id.name);
+            sizeView = itemView.findViewById(R.id.size);
+            costView= itemView.findViewById(R.id.cost);
+            locationView = itemView.findViewById(R.id.location);
+            categoryView = itemView.findViewById(R.id.category);
+
+
         }
     }
 }
