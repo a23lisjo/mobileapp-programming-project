@@ -7,11 +7,55 @@
 
 
     <TextView
+        android:id="@+id/category1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Namn" />
+
+    <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:text="TextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/category2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vikt(g)" />
+
+        <TextView
+            android:id="@+id/category3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Storlek(cm)" />
+
+        <TextView
+            android:id="@+id/category4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Utbredning" />
+
+        <TextView
+            android:id="@+id/category5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Släkte" />
+    </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,6 +91,7 @@
                 android:layout_weight="1"
                 android:text="TextView" />
         </LinearLayout>
+
 
 
 </LinearLayout>
