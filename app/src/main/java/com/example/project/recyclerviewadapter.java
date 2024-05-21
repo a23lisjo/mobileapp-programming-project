@@ -31,8 +31,8 @@ public class recyclerviewadapter extends RecyclerView.Adapter<recyclerviewadapte
     @Override
     public void onBindViewHolder(@NonNull recyclerviewadapter.MyViewHolder holder, int position) {
         holder.nameView.setText(owls.get(position).getName());
-        holder.categoryView.setText(owls.get(position).getSize());
-        holder.categoryView.setText(owls.get(position).getCost());
+        holder.sizeView.setText(owls.get(position).getSize());
+        holder.costView.setText(owls.get(position).getCost());
         holder.locationView.setText(owls.get(position).getLocation());
         holder.categoryView.setText(owls.get(position).getCategory());
     }
