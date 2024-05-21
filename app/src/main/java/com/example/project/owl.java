@@ -3,8 +3,8 @@ package com.example.project;
 public class owl {
 
     private String name;
-    private int size;
-    private int cost;
+    private String size;
+    private String cost;
     private String category;
     private String location;
 
@@ -17,19 +17,19 @@ public class owl {
         this.name = name;
     }
 
-    public int getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
-    public int getCost() {
+    public String getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(String cost) {
         this.cost = cost;
     }
 
@@ -50,7 +50,7 @@ public class owl {
     }
 
 
-    public owl(String name, int size, int cost, String category, String location) {
+    public owl(String name, String size, String cost, String category, String location) {
         this.name = name;
         this.size = size;
         this.cost = cost;
