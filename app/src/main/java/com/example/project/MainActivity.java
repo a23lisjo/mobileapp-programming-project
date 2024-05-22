@@ -1,7 +1,10 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,9 +23,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23lisjo";
 
-    ArrayList<owl> owls= new ArrayList<>();
     Gson gson = new Gson();
-    String json = gson.toJson(owls);
 
 
 
@@ -32,6 +33,17 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setContentView(R.layout.activity_main);
 
         new JsonTask (this).execute(JSON_URL);
+
+        Button gotosecond = findViewById(R.id.gotosecond);
+        gotosecond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Listener", "Clicked go button");
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
 
 
